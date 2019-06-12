@@ -1,0 +1,226 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+<style> 
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.ss{
+float:left;
+}
+.j{
+   margin: 10px;
+  width: 100%;
+    padding: 10px;
+   background:white;
+   float: left;
+   word-wrap:break-word;
+   min-height: 150px;
+   max-height: 150px;
+    overflow: auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#ea1d5d;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#ea1d5d ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.x{
+  background-color: #e6004c;
+  color: white;
+  padding: 12px;
+  width: 120px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+.x:hover{
+background-color: black;
+cursor: pointer;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+</style>
+	<title>Elenco trascrizioni da approvare</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Library Member Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="templates/css/styleForm.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<!-- //Fonts -->
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+<ul>
+  <li><a href="mymanager">My Profile</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Trascrizioni</a>
+    <div class="dropdown-content">
+      <a href="assegnanuovatrascrizione">Assegna nuova trascrizione</a>
+      <a href="assegnamodificatrascrizione">Assegna trascrizione da modificare</a>
+      <a href="riassegnamodificatrascrizione">Riassegna trascrizione</a>
+      <a href="approvatrascrizione">Approva nuova trascrizione</a>
+      <a href="approvatrascrizionemodificata">Approva modifica trascrizione</a>
+    </div>
+  </li>
+  <li><a href="visualizzatra">Le trascrizioni</a></li>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Trascrittore</a>
+    <div class="dropdown-content">
+      <a href="aumental">Aumenta livello trascrittore</a>
+    </div>
+  </li>
+    <li style="float:right"><a class="active" href="logout">Logout</a></li>
+  
+</ul>
+<br>
+	<div class="container w3layouts agileits" style="width:397px;top:0px;">
+
+		<div class="login w3layouts agileits">
+			<h2>Ecco tutte le  trascrizioni da validare</h2>
+<#list trascrizioni as trascrizione >
+<form action="assegnat">
+<label style="color:white;">Titolo:</label>
+<br>
+	<input type="text" value="${trascrizione.opera.titolo}" readonly Name="titolo">
+<br>
+	<inputv value="${trascrizione.immagine.id}" readonly Name="idimmagine">
+<br>
+<label style="color:white;">Immagine:</label>
+<br>
+	  <img src="${trascrizione.immagine.imm}.jpg" width="300px" heigth="300px;">
+<br>
+<label style="color:white;">Descrizione:</label>
+<br>
+	<textarea onlyread>${trascrizione.immagine.descrizione}</textarea>
+<br>
+	<input type="hidden"  value="${trascrizione.id}" readonly Name="idtrascrizione">
+<br>
+<label style="color:white;">La trascrizione:</label>
+<br>
+	<textarea onlyread>${trascrizione.testo}</textarea>
+	<br>
+	<label style="color:white;">Nome utente:</label>
+<br>
+	<input type="text" value="${trascrizione.utente.nome}" readonly Name="nomeutente">
+<br>
+<label style="color:white;">Cognome utente:</label>
+<br>
+	<input type="text" value="${trascrizione.utente.cognome}" readonly Name="cognomeutente">
+<br>
+<label style="color:white;">Livello utente:</label>
+<br>
+	<input type="text" value="${trascrizione.utente.livello}" readonly Name="livello">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="send-button w3layouts agileits">
+				<input type="submit" value="APPROVA">
+				</div>
+<br>
+<br>
+</form>
+
+	<hr>
+	<br>
+	<br>
+</#list>
+</div>
+<div class="clear"></div>
+		</div>
+       <div class="clear"></div>
+    <div class="footer w3layouts agileits">
+		<p>© 2018 Web Library. All Rights Reserved | Design by Andrea Paris</p>
+	</div>
+	
+</body>
+<!-- //Body -->
+
+</html>

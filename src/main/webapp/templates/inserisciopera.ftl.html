@@ -1,0 +1,166 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+<style> 
+.ss{
+float:left;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#ea1d5d;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#ea1d5d ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+	<title>Insert opera</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Library Member Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="templates/css/styleForm.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<!-- //Fonts -->
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+<ul>
+  <li><a href="myamministratore">My Profile</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Opera</a>
+    <div class="dropdown-content">
+      <a href="operains">Inserisci nuova opera</a>
+      <a href="eliminaopera">Elimina vecchia opera</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Utente</a>
+    <div class="dropdown-content">
+      <a href="elimina">Elimina utente</a>
+      <a href="listadownload">Richieste download</a>
+       <a href="listatrascrittori">Richieste trascrittore</a>
+    </div>
+  </li>
+    <li style="float:right"><a class="active" href="logout">Logout</a></li>
+  
+</ul>
+<br>
+<div class="container w3layouts agileits">
+<h2>Inserisci una nuova opera</h2>
+	<form method="post" action="inserisciopera" enctype="multipart/form-data">
+				
+			    <input type="text" Name="titolo" placeholder="titolo"  required="">
+                <input type="text" Name="anno" placeholder="anno"  required="">
+				<input type="text" Name="autore" placeholder="autore" required="" >
+                <textarea name="storia" placeholder="storia" required=""></textarea>>
+				<input type="text" Name="categoria" placeholder="categoria" required="">
+				<div class="ss"><label style="color:white">Select a file</label> <input type="file" name="file"><br><br></div>
+				<div class="send-button w3layouts agileits">
+				<input type="submit" value="CONFERMA">
+				</div>
+				<div>
+				<input type="reset" value="ANNULLA" style="    width: 60%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 100;
+    background-color: transparent;
+    color: #CCC;
+    border: 1px solid rgba(238, 238, 238, 0.41);
+    border-width: thin;
+    cursor: pointer;
+    outline: none;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+    text-decoration: none;">
+				</div>
+			</form>
+                          
+</div>
+<div class="clear"></div>
+		</div>
+       <div class="clear"></div>
+    <div class="footer w3layouts agileits">
+		<p>© 2018 Web Library. All Rights Reserved | Design by Andrea Paris</p>
+	</div>
+	
+</body>
+<!-- //Body -->
+
+</html>

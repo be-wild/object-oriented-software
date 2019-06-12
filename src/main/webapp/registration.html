@@ -1,0 +1,125 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+<style> 
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+</style>
+	<title>Registration_Form</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Library Member Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="templates/css/styleForm.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<!-- //Fonts -->
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+
+	<h1>LIBRARY MEMBER REGISTRATION FORM</h1>
+
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>Sign Up</h2>
+			<form action="registration" method="post">
+				
+			    <input type="text" Name="nome" placeholder="nome" pattern="[a-z]+[a-z]" title="nome" required="">
+                <input type="text" Name="cognome" placeholder="cognome" pattern="[a-z]+[a-z]" title="cognome" required="">
+				<input type="text" Name="eta" placeholder="eta" required="" pattern="[0-9]{2}" title="nn">
+				<br>
+				<font color="white">sesso:</font>
+				<select Name="sesso" required="" style="width:340px;height:40px;">sesso:
+                <option value="uomo">uomo</option>
+                <option value="donna">donna</option>
+                </select>
+                <br>
+                <br>
+				<input type="text" Name="professione" placeholder="professione" required="">
+				<input type="text" Name="titolo" placeholder="titolo" required="">
+				<input type="text" Name="anniesperienzelavorative" placeholder="anni asperienze lavorative" required=""  title="n">
+				<textarea name="esperienzelavorative" placeholder="esperienze lavorative" required=""></textarea>
+				<input type="email" Name="email" placeholder="email" required="">
+				<input type="text" Name="username" placeholder="username" required="">
+				<input type="password" Name="password" id="password1" placeholder="password" required="" pattern=".{8,}" title="eight or more character">
+				<input type="password" Name="password" id="password2" placeholder="confirm password" required="" pattern=".{8,}" title="eight or more character">
+		
+				<div class="send-button w3layouts agileits">
+				<input type="submit" value="CONFERMA">
+				</div>
+				<div>
+				<input type="reset" value="ANNULLA" style="    width: 60%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 100;
+    background-color: transparent;
+    color: #CCC;
+    border: 1px solid rgba(238, 238, 238, 0.41);
+    border-width: thin;
+    cursor: pointer;
+    outline: none;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+    text-decoration: none;">
+				</div>
+			</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+       <div class="clear"></div>
+    <div class="footer w3layouts agileits">
+		<p>© 2018 Web Library. All Rights Reserved | Design by Andrea Paris</p>
+	</div>
+		<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+</body>
+<!-- //Body -->
+
+</html>
